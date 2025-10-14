@@ -1,40 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #ffffff 0%, #e3f6cd 60%, #cde8a2 100%);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-.banner {
-  background-color: #e3f6cd;
+nav {
   text-align: center;
-  padding: 60px 20px;
-}
-
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
-
-.text-inicio {
-    font-family: Dancing Script;
+  background-color: #fff;
+  padding: 10px 0;
 }
 
 .nav-links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    text-decoration: none;
-    color: black;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0;
 }
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.banner {
+  background: linear-gradient(to bottom, #e3f6cd 0%, #c9f4a3 100%);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 60px;
+}
+
+.banner img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.text-banner h4 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.text-banner h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #4a4a4a;
+}
+
+.button-details {
+  background-color: #6ba84b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.button-details:hover {
+  background-color: #558c3b;
+}
+
+
+.nav-links a:hover {
+  color: #6ba84b; /* verde suave no hover */
+}
+
+/* banner passadeira */
+.banner-grande {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: linear-gradient(to right, #f9f9f9, #e3f6cd);
+  padding: 50px;
+  margin: 50px 0;
+  border-radius: 20px;
+}
+
+.banner-grande img {
+  width: 350px;
+  border-radius: 15px;
+}
+
+.banner-grande .conteudo {
+  max-width: 400px;
+}
+
+.banner-grande h2 {
+  color: #333;
+}
+
+.promo {
+  color: #6ba84b;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* footer*/
+.footer {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.footer h2 {
+  color: #e3f6cd;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
