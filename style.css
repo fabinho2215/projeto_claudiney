@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.banner {
+  background-color: #e3f6cd;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
 
 .text-inicio {
     font-family: Dancing Script;
