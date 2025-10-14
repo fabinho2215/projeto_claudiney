@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-h1 {
+.text-inicio {
     font-family: Dancing Script;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    gap: 15px;
 }
