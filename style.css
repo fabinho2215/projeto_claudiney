@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -6,228 +6,112 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabeçalho */
 .header-container {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; /* alinha verticalmente */
+  justify-content: space-between;
+  align-items: center;
   padding: 20px 60px;
 }
 
-.header-bar {
-  display: flex;
-  flex-direction: column;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom, #ffffff 0%, #e3f6cd 60%, #cde8a2 100%);
+.nome-site {
+  color: #5fa44b;
 }
 
 .text-inicio {
   font-size: 0.9rem;
   color: #555;
   font-style: italic;
-  margin: 0;
 }
 
-
+/* Ícones */
 .icons-person {
   display: flex;
-  align-items: center;
-  gap: 25px; 
-}
-
-.icons-person svg {
-  width: 22px;
-  height: 22px;
-  color: #333;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-
-
-.icons-person svg:hover {
-  color: #31a233; 
-  transform: scale(1.1);
-}
-
-.icons-person {
-  display: flex;
-  justify-content: right;
-  font-size: 5rem;
-  margin-bottom: 5px;
-  gap: 25px;
-}
-
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  list-style: none;
   gap: 20px;
-  padding: 0;
-  margin: 10px 0;
+  font-size: 1.5rem;
 }
 
-.nav-links-down {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 80px;
-  padding: 0;
-  margin: 10px 0;
-}
-
-.nav-links-down a {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  text-decoration: none;
-  color: #717171bc;
+/* Botão de modo */
+#toggle-mode {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #e0e0e0;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: background 0.3s;
+  z-index: 1000;
 }
 
-.nav-links-down a:hover {
-  color: #d4b200; 
-}
-
-.nav-links-down svg {
-  color: #e0b000;
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
+/* Seções */
 .banner {
-  background: linear-gradient(to bottom, #e3f6cd 0%, #c9f4a3 100%);
   display: flex;
-  justify-content: left;
   align-items: center;
-  gap: 40px;
-  padding: 15px 60px;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, #e3f6cd, #cde8a2);
+  padding: 40px;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .banner img {
-  width: 400px;
-  height: 400px;
-  border-radius: 5px;
-}
-
-.text-banner h4 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5rem;
-  color: #333;
+  width: 350px;
+  border-radius: 10px;
 }
 
 .text-banner h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
   color: brown;
 }
 
+/* Botão verde */
 .button-details {
   background-color: #6ba84b;
-  color: white;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
   transition: background-color 0.3s;
 }
-
 .button-details:hover {
   background-color: #558c3b;
 }
 
-
-.nav-links a:hover {
-  color: #6ba84b; /* verde suave no hover */
-}
-
-/* banner passadeira */
-.banner-grande {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  background: linear-gradient(to right, #f9f9f9, #e3f6cd);
-  padding: 50px;
-  margin: 50px 0;
-  border-radius: 20px;
-}
-
-.banner-grande img {
-  width: 350px;
-  border-radius: 15px;
-}
-
-.banner-grande .conteudo {
-  max-width: 400px;
-}
-
-.banner-grande h2 {
-  color: #333;
-}
-
-.promo {
-  color: #6ba84b;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-/* footer*/
+/* Rodapé */
 .footer {
   background-color: #222;
   color: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 40px 20px;
-  flex-wrap: wrap;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
 }
 
-.footer h2 {
-  color: #e3f6cd;
-}
-
-.footer p {
-  margin: 5px 0;
-  font-size: 0.9rem;
-}
-/* 🌞 Estilo padrão (modo claro) */
-body {
-  background-color: white;        /* fundo claro */
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease;
-  color: black;                   /* letras pretas */
-}
-
-button {
-  background-color: #e0e0e0;      /* botão claro */
-  color: black;                   /* texto do botão */
-  padding: 10px 20px;
-  margin: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* 🌚 Modo escuro: só muda o fundo e os botões */
+/* 🌙 Estilos modo escuro */
 body.dark-mode {
-  background-color: #121212;      /* fundo escuro */
+  background-color: #121212;
+  color: #eee;
 }
 
-body.dark-mode button {
-  background-color: #2c2c2c;      /* botão escuro */
-  color: black;                   /* texto do botão ainda preto */
+body.dark-mode .header-container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .footer {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode #toggle-mode {
+  background-color: #333;
+  color: #fff;
 }

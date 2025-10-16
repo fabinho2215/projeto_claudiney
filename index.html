@@ -9,66 +9,12 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>OXENTE</title>
+    
 </head>
  
 <body>
 
-     <button id="toggle-mode">Carregando...</button>
-  
-    
-
-   <script>
-    
-const button = document.getElementById('toggle-mode');
-const body = document.body;
-
-// Atualiza o texto do botão
-function atualizarBotao() {
-  if (body.classList.contains('dark-mode')) {
-    button.innerHTML = '☀️ Ativar Modo Claro';
-  } else {
-    button.innerHTML = '🌙 Ativar Modo Escuro';
-  }
-}
-
-// Detecta o modo do sistema
-function detectarPreferenciaSistema() {
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-
-// Aplica o modo
-function aplicarModo(modo) {
-  if (modo === 'escuro') {
-    body.classList.add('dark-mode');
-  } else {
-    body.classList.remove('dark-mode');
-  }
-  atualizarBotao();
-}
-
-// Ao clicar no botão, alterna o modo
-button.addEventListener('click', () => {
-  const modoAtual = body.classList.contains('dark-mode') ? 'escuro' : 'claro';
-  const novoModo = modoAtual === 'escuro' ? 'claro' : 'escuro';
-  aplicarModo(novoModo);
-
-  // Salva a escolha do usuário
-  localStorage.setItem('modo', novoModo);
-});
-
-// Ao carregar a página
-window.addEventListener('load', () => {
-  const modoSalvo = localStorage.getItem('modo');
-
-  if (modoSalvo) {
-    aplicarModo(modoSalvo);
-  } else {
-    const modoSistema = detectarPreferenciaSistema() ? 'escuro' : 'claro';
-    aplicarModo(modoSistema);
-  }
-});
-
-   </script>
+       <button id="toggle-mode">Carregando...</button>
 
 
     
@@ -184,43 +130,43 @@ window.addEventListener('load', () => {
             <h3>Bolsa lateral - bege e marrom</h3>
             <p>★★★★★</p>
             <h2>R$ 35,00</h2>
-        <div>
+        </div>
 
         <div>
             <img src="imgs/bolsa lateral preta aracajuana.png" alt="">
-            <h3>Bolsa - lateral - preta noite aracajuana</h3>
+            <h3>Bolsa lateral - preta noite aracajuana</h3>
             <p>★★★★★</p>
             <h2>R$ 50,00</h2>
-        <div>
+        </div>
 
         <div>
             <img src="imgs/michila listrada passeio na sementeira.png" alt="">
-            <h3>Mochila listrada- passeio na sementeira</h3>
+            <h3>Mochila listrada - passeio na sementeira</h3>
             <p>★★★★★</p>
             <h2>R$ 60,00</h2>
-        <div>
+        </div>
 
         <div>
             <img src="imgs/boneca de pano.png" alt="">
             <h3>Boneca de pano</h3>
             <p>★★★★★</p>
             <h2>R$ 30,00</h2>
-        <div>
+        </div>
 
         <div>
             <img src="imgs/Lapis decorativo filhos de lampiao.png" alt="">
             <h3>Lápis decorativo</h3>
             <p>★★★★★</p>
             <h2>R$ 10,00</h2>
-        <div>
+        </div>
 
         <div>
             <img src="imgs/canecas e portas copos personalizados.png" alt="">
             <h3>Canecas e portas copos personalizados</h3>
             <p>★★★★★</p>
             <h2>R$ 20,00</h2>
-        <div>
-    </section>
+        </div>
+</section>
 
     <button>MAIS PRODUTOS</button>
 
