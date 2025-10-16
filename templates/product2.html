@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/projeto-claudiney/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>OXENTE - Compras</title>
+</head>
+
+  <button id="toggle-mode">Carregando...</button>
+  
+    <header class="header-container">
+        <div class="header-bar">
+            <H1 class="nome-site">OXENTE!!!!</H1>
+            <P class="text-inicio">Você achou que eu iria esquecer de você?</P>
+        </div>
+
+        <div class="icons-person">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </a>
+
+            <a href="product2.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                </svg>
+            </a>
+
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg>
+            </a>
+
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+
+    <nav>
+        <hr>
+        <ul class="nav-links">
+            <li class="link"><a href="index.html">Pagina inicial</a></li>
+            <li class="link1"><a href="maps.html">Localização</a></li>
+            <li class="link2"><a href="#">Encomendas</a></li>
+            <li class="link6"><a href="#">Sobre nós</a></li>
+            <li class="link7"><a href="#">Contatos</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <nav>  
+        <ul class="nav-links-down">
+            <li class="link8">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                </svg>
+                <span>Acompanhe seu pedido</span>
+            </a>
+            </li>
+            
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
+                        <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1"/>
+                    </svg>
+                    <span>Formas de Pagamento</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                    </svg>
+                    <span>Suporte 24/7</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+     <section class="list-product" id="produtos"></section>
+      <div>
+            <img src="/projeto-claudiney/imgs/bolsa lateral preta aracajuana.png" alt="">
+            <h3>Bolsa lateral - preta noite aracajuana</h3>
+            <p>★★★★★</p>
+            <h2>R$ 50,00</h2>
+        </div>
+         <section class="buy">
+        <button>Adicionar ao carrinho</button>
+        <button>Comprar agora </button>
+        </section>
+
+        <div>
+       
+    </div>
+
+   
+
+    <!--ICONES-->    
+    <i class="bi bi-heart"></i>
+    <i class="bi bi-bag"></i>
+    <i class="bi bi-person"></i>
+    <i class="bi bi-search"></i>
+
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h2>OXENTE!!!!</h2>
+            <p>Você achou que eu iria esquecer de você?</p>
+            <P><strong>FEIRA DO TURISMO</strong></P>
+            <P><strong>79 99833-4897</strong></P>
+
+            <div class="icons-redes">
+                <a href="#"><li class=""></li></a>
+                <a href="#"><li class=""></li></a>  
+                <a href="#"><li class=""></li></a>
+                <a href="#"><li class=""></li></a>
+            </div>
+        <div>
+
+        <div class="footer-eventos">
+            <h2>EVENTOS NA ORLA DA ATALAIA</h2>
+            <P>17 de outubro</P>
+            <p>Vila da Criança</p>
+
+            <hr>
+            <h2>18 de outubro</h2>
+            <p>Vila da crinaça</p>
+        <div>
+    </footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

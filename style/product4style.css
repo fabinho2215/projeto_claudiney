@@ -144,7 +144,6 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #fafafa;
 }
 
 .container div {
@@ -175,7 +174,6 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #fafafa;
 }
 
 .list-product div {
