@@ -6,6 +6,46 @@
   box-sizing: border-box;
 }
 
+/*barra de pesquisa*/
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#search-icon {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#search-icon:hover {
+  color: #6ba84b;
+}
+
+/* input escondido por padrão */
+#search-bar {
+  width: 0;
+  opacity: 0;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.4s ease;
+}
+
+/* aparece quando ativado */
+#search-bar.active {
+  width: 180px;
+  opacity: 1;
+}
+
+
 .header-container {
   display: flex;
   justify-content: space-between; 
@@ -288,17 +328,17 @@
   margin: 5px 0;
   font-size: 0.9rem;
 }
-/* 🌞 Estilo padrão (modo claro) */
+
 body {
-  background-color: white;        /* fundo claro */
+  background-color: white;        
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease;
-  color: rgb(255, 255, 255);                   /* letras pretas */
+  color: rgb(255, 255, 255);                   
 }
 
 button {
-  background-color: #e0e0e0;      /* botão claro */
-  color: rgb(255, 255, 255);                   /* texto do botão */
+  background-color: #e0e0e0;      
+  color: rgb(255, 255, 255);                   
   padding: 10px 20px;
   margin: 20px;
   border: none;
@@ -307,12 +347,80 @@ button {
   transition: background-color 0.3s ease;
 }
 
-/* 🌚 Modo escuro: só muda o fundo e os botões */
-body.dark-mode {
-  background-color: #121212;      /* fundo escuro */
+/* elementos nativos interativos */
+:is(a, button, summary, input[type="button"], input[type="submit"], input[type="reset"], select, textarea) {
+  cursor: pointer;
 }
 
-body.dark-mode button {
-  background-color: #2c2c2c;      /* botão escuro */
-  color: rgb(255, 255, 255);                   /* texto do botão ainda preto */
+/* labels que acionam controles e elementos com role/button, onclick ou tabindex interativo */
+label[for],
+[role="button"],
+[onclick],
+[tabindex]:not([tabindex="-1"]) {
+  cursor: pointer;
 }
+
+/* se você usa classes para elementos clicáveis (ex: .clickable, .btn) */
+.clickable, .btn {
+  cursor: pointer;
+}
+
+/* ======= MODO ESCURO ======= */
+
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode .header-bar,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a {
+  color: #f5f5f5 !important;
+}
+
+/* botões */
+body.dark-mode button {
+  background-color: #2c2c2c !important;
+  color: #ffffff !important;
+}
+
+/* banners e containers */
+body.dark-mode .banner,
+body.dark-mode .container div,
+body.dark-mode .list-product div,
+body.dark-mode .banner-grande {
+  background: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
+}
+
+/* títulos e textos dentro dos blocos */
+body.dark-mode .text-banner h1,
+body.dark-mode .text-banner h4,
+body.dark-mode .list-product h2,
+body.dark-mode .list-product h3 {
+  color: #fff !important;
+}
+
+/* navbar e rodapé */
+body.dark-mode nav,
+body.dark-mode .footer {
+  background-color: #181818 !important;
+  color: #ddd !important;
+}
+
+/* ícones */
+body.dark-mode svg {
+  color: #a4e9ce !important;
+}
+
+/* barra de pesquisa */
+body.dark-mode #search-bar {
+  background: #2a2a2a !important;
+  color: #fff !important;
+  border: 1px solid #444 !important;
+}
+
