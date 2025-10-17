@@ -288,31 +288,70 @@
   margin: 5px 0;
   font-size: 0.9rem;
 }
-/* 🌞 Estilo padrão (modo claro) */
-body {
-  background-color: white;        /* fundo claro */
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease;
-  color: rgb(255, 255, 255);                   /* letras pretas */
-}
+:root {
+      --bg-light: #ffffff;
+      --bg-dark: #121212;
+      --text-light: #121212;
+      --text-dark: #f1f1f1;
+      --accent: #6ba84b;
+    }
 
-button {
-  background-color: #e0e0e0;      /* botão claro */
-  color: rgb(255, 255, 255);                   /* texto do botão */
-  padding: 10px 20px;
-  margin: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-/* 🌚 Modo escuro: só muda o fundo e os botões */
-body.dark-mode {
-  background-color: #121212;      /* fundo escuro */
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #f2f2f2;
+    }
 
-body.dark-mode button {
-  background-color: #2c2c2c;      /* botão escuro */
-  color: rgb(255, 255, 255);                   /* texto do botão ainda preto */
-}
+    h1 {
+      margin: 0;
+    }
+
+    /* Botão tema */
+    #toggle-theme {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--accent);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    #toggle-theme:hover {
+      background-color: #558c3b;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Modo escuro */
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark-mode header {
+      background-color: #1f1f1f;
+    }
+
+    body.dark-mode #toggle-theme {
+      background-color: #333;
+      color: #eee;
+    }
+
+    body.dark-mode #toggle-theme:hover {
+      background-color: #444;
+    }

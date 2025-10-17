@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap');
+
 
 * {
   margin: 0;
@@ -6,46 +8,7 @@
   box-sizing: border-box;
 }
 
-/*barra de pesquisa*/
-.search-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-#search-icon {
-  font-size: 20px;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-#search-icon:hover {
-  color: #6ba84b;
-}
-
-/* input escondido por padrão */
-#search-bar {
-  width: 0;
-  opacity: 0;
-  border: 1px solid #ccc;
-  outline: none;
-  background: #fff;
-  color: #333;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  transition: all 0.4s ease;
-}
-
-/* aparece quando ativado */
-#search-bar.active {
-  width: 180px;
-  opacity: 1;
-}
-
-
+/*--- HEADER ---*/
 .header-container {
   display: flex;
   justify-content: space-between; 
@@ -56,6 +19,63 @@
 .header-bar {
   display: flex;
   flex-direction: column;
+  top:10px;
+}
+
+.logo-art {
+  height: 5px;
+  width: 10px;
+}
+
+/* --- BARRA DE PESQUISA NO TOPO --- */
+.search-bar-top {
+  background-color: #f7f7f700; 
+  padding: 15px 60px; /* Padding vertical e horizontal respecti. */
+  text-align: center; /* Centraliza o form dentro da div */
+}
+
+/* Estilo do Formulário */
+#top-search-form {
+    display: flex;
+    max-width: 700px; /* Limita a largura máxima da barra para não ficar muito larga em telas grandes */
+    margin: 0 auto; /* Centraliza o formulário */
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que nada saia da borda */
+    background-color: #fff;
+}
+
+/* Estilo do Input */
+#top-search-input {
+    flex-grow: 1; /* O input ocupa todo o espaço disponível */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none; /* Remove o contorno azul ao focar */
+}
+
+/* Estilo do Botão (Lupa) */
+#top-search-form button {
+    background-color: #fff; /* Fundo branco ou transparente */
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex; /* Para alinhar a lupa SVG */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    margin: 0; /* Remove a margem padrão de botões no CSS */
+}
+
+#top-search-form button:hover {
+    background-color: #eee;
+}
+
+#top-search-form button svg {
+    color: #333; /* Cor da lupa */
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s;
 }
 
 .text-inicio {
@@ -64,7 +84,6 @@
   font-style: italic;
   margin: 0;
 }
-
 
 .icons-person {
   display: flex;
@@ -80,7 +99,6 @@
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
-
 .icons-person svg:hover {
   color: #31a233; 
   transform: scale(1.1);
@@ -94,12 +112,11 @@
   gap: 25px;
 }
 
-
 .nav-links {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 20px;
+  gap: 60px;
   padding: 0;
   margin: 10px 0;
 }
@@ -139,6 +156,12 @@
   color: #333;
   font-weight: 600;
   transition: color 0.3s;
+}
+
+.nome-site {
+  color: green;
+  font-size: 5rem;
+  font-family: Permanent Marker;
 }
 
 .banner {
@@ -197,6 +220,7 @@
 
 .container div {
   background: linear-gradient(to bottom, #e3f6cd 0%, #c9f4a3 100%);
+  background-color: var(--box-color);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 1rem;
@@ -276,7 +300,7 @@
 
 
 .nav-links a:hover {
-  color: #6ba84b; /* verde suave no hover */
+  color: #6ba84b;
 }
 
 /* banner passadeira */
@@ -304,41 +328,159 @@
   color: #333;
 }
 
+/* --- SEÇÃO OFERTAS --- */
+.newsletter-section {
+    display: flex;
+    justify-content: space-between; /* Espaça o texto e o formulário */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 60px;
+    margin: 50px 0;
+    background-color: #f8f8f8; /* Fundo suave para destacar */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.newsletter-tittle {
+    font-size: 2rem;
+    margin: 0;
+    color: #333;
+}
+
+.newsletter-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#barra-email {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 280px; /* Largura padrão para o campo de email */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#barra-email:focus {
+    border-color: #6ba84b; /* Cor de destaque ao focar */
+}
+
+.button-newsletter-send {
+    background-color: #6ba84b; /* verde de destaque */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin: 0; /* anula a margem do seletor 'button' global */
+}
+
+.button-newsletter-send:hover {
+    background-color: #558c3b;
+}
+
 .promo {
   color: #6ba84b;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-/* footer*/
+/* --- FOOTER --- */
 .footer {
-  background-color: #222;
+  background-color: #222; 
   color: white;
+  padding-top: 50px;
+}
+
+.footer-container {
   display: flex;
-  justify-content: space-around;
-  padding: 40px 20px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 40px 50px 40px;
+  flex-wrap: wrap; 
 }
 
-.footer h2 {
-  color: #e3f6cd;
+.footer-column {
+  flex-basis: 200px; 
+  flex-grow: 1;
 }
 
-.footer p {
+.footer-column h2, .footer-column h3 {
+  color: #e3f6cd; 
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-column p {
   margin: 5px 0;
   font-size: 0.9rem;
+  color: #ccc;
 }
 
-body {
-  background-color: white;        
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease;
-  color: rgb(255, 255, 255);                   
+/* Estilo para links rápidos */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d4b200; /* cor amarela do site para destaque */
+}
+
+/* Estilo para Eventos */
+.footer-eventos hr {
+    border-color: #444;
+    margin: 15px 0;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #fff !important;
+    margin-bottom: 2px !important;
+}
+
+.event-title {
+    font-style: italic;
+    color: #aaa !important;
+}
+
+
+/* Barra inferior (direitos autorais) */
+.footer-bottom {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 0.85rem;
+    color: #999;
 }
 
 button {
-  background-color: #e0e0e0;      
-  color: rgb(255, 255, 255);                   
+ 
+  background-color: #6ba84b; 
+  color: white;
   padding: 10px 20px;
   margin: 20px;
   border: none;
@@ -347,80 +489,125 @@ button {
   transition: background-color 0.3s ease;
 }
 
-/* elementos nativos interativos */
-:is(a, button, summary, input[type="button"], input[type="submit"], input[type="reset"], select, textarea) {
-  cursor: pointer;
+
+/* about.html */
+.sobre-nos {
+  background: linear-gradient(to bottom, #e3f6cd 0%, #c9f4a3 100%);;
+  padding: 80px 10%;
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
 
-/* labels que acionam controles e elementos com role/button, onclick ou tabindex interativo */
-label[for],
-[role="button"],
-[onclick],
-[tabindex]:not([tabindex="-1"]) {
-  cursor: pointer;
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-/* se você usa classes para elementos clicáveis (ex: .clickable, .btn) */
-.clickable, .btn {
-  cursor: pointer;
+.sobre-texto {
+  flex: 1 1 500px;
 }
 
-/* ======= MODO ESCURO ======= */
+.sobre-texto h1 {
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 10px;
+}
 
+.sobre-texto h2 {
+  font-size: 1.5rem;
+  color: #0d4e00;
+  margin-bottom: 20px;
+}
+
+.sobre-texto h2 span {
+  color: #60f000;
+  font-weight: 700;
+}
+
+.sobre-texto p {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.btn-sobre {
+  display: inline-block;
+  background: #144200;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-sobre:hover {
+  background: #6ba84b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.sobre-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sobre-img img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn-sobre {
+    margin-top: 10px;
+  }
+}
+
+
+/* 🌞 Estilo padrão (modo claro) */
+body {
+  background-color: white;        /* fundo claro */
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+  color: rgb(255, 255, 255);                   /* letras pretas */
+}
+
+button {
+  background-color: #e0e0e0;      /* botão claro */
+  color: rgb(255, 255, 255);                   /* texto do botão */
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 🌚 Modo escuro: só muda o fundo e os botões */
 body.dark-mode {
-  background-color: #121212 !important;
-  color: #f5f5f5 !important;
+  background-color: #121212;      /* fundo escuro */
 }
 
-body.dark-mode .header-bar,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode p,
-body.dark-mode a {
-  color: #f5f5f5 !important;
-}
-
-/* botões */
 body.dark-mode button {
-  background-color: #2c2c2c !important;
-  color: #ffffff !important;
+  background-color: #2c2c2c;      /* botão escuro */
+  color: rgb(255, 255, 255);                   /* texto do botão ainda preto */
 }
-
-/* banners e containers */
-body.dark-mode .banner,
-body.dark-mode .container div,
-body.dark-mode .list-product div,
-body.dark-mode .banner-grande {
-  background: #1e1e1e !important;
-  color: #f5f5f5 !important;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
-}
-
-/* títulos e textos dentro dos blocos */
-body.dark-mode .text-banner h1,
-body.dark-mode .text-banner h4,
-body.dark-mode .list-product h2,
-body.dark-mode .list-product h3 {
-  color: #fff !important;
-}
-
-/* navbar e rodapé */
-body.dark-mode nav,
-body.dark-mode .footer {
-  background-color: #181818 !important;
-  color: #ddd !important;
-}
-
-/* ícones */
-body.dark-mode svg {
-  color: #a4e9ce !important;
-}
-
-/* barra de pesquisa */
-body.dark-mode #search-bar {
-  background: #2a2a2a !important;
-  color: #fff !important;
-  border: 1px solid #444 !important;
-}
-

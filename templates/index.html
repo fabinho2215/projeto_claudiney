@@ -8,32 +8,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="logo3.png" type="image/x-icon"/>
+    <link rel="icon" href="/projeto-claudiney/icon/logo_04.png" type="image/x-icon" />
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <title>OXENTE</title>
+    <title>Site Oxente</title>
+    <script src="/projeto-claudiney/script.js"></script>
 </head>
 
 <body>
 
-    <button id="toggle-mode">Carregando...</button>
+
+    <!--Cabeçalho-->
+    <button id="toggle-theme" class="theme-toggle">🌙 Modo Escuro</button>
+
 
     <header class="header-container">
         <div class="header-bar">
+            <img class="logo-art" src="/projeto-claudiney/icon/logo_04.png" alt="logo">
             <H1 class="nome-site">OXENTE!!!!</H1>
             <P class="text-inicio">Você achou que eu iria esquecer de você?</P>
         </div>
 
         <div class="icons-person">
-            <!-- lupa + barra -->
-            <div class="search-container">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" id="search-icon"
-                    viewBox="0 0 16 16" class="bi bi-search">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-            </div>
-
-            <!-- outros ícones -->
             <a href="product2.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag"
                     viewBox="0 0 16 16">
@@ -58,9 +53,20 @@
                 </svg>
             </a>
         </div>
-
     </header>
 
+    <div class="search-bar-top">
+        <form id="top-search-form" action="/search" method="get">
+            <input type="text" id="top-search-input" name="q" placeholder="Pesquisar produtos, categorias, roupas..."
+                aria-label="Pesquisar no site">
+            <button type="submit" aria-label="Buscar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </button>
+        </form>
+    </div>
 
     <nav>
         <hr>
@@ -88,7 +94,7 @@
 
             <li>
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
                         class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
                         <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z" />
                         <path
@@ -100,7 +106,7 @@
 
             <li>
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
                         class="bi bi-headset" viewBox="0 0 16 16">
                         <path
                             d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5" />
@@ -146,7 +152,7 @@
         <div>
             <img src="/projeto-claudiney/imgs/bolsa lateral bege e marrom.png" alt="">
             <h3>Bolsa lateral - bege e marrom</h3>
-             <p>★★★★★</p>
+            <p>★★★★★</p>
             <h2>R$ 35,00</h2>
         </div>
 
@@ -187,17 +193,21 @@
     </section>
 
 
-    <button>MAIS PRODUTOS</button>
+    <button class="mais-produtos">MAIS PRODUTOS</button>
 
-    <div>
-        <h1>QUER RECEBER AS NOSSAS OFERTAS?</h1>
-        <P>Se inscreva para receber as nossas ofertas</P>
+    <section class="newsletter-section">
+        <div class="newsletter-text">
+            <h1 class="newsletter-tittle">QUER RECEBER AS NOSSAS OFERTAS?</h1>
+            <p class="newsletter-subtitle">Se inscreva para receber as nossas ofertas.</p>
+        </div>
 
-        <form action="/pesquisa" method="get">
-            <input type="email" id="barra-email" name="q" placeholder="Digite seu email">
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+        <div class="newsletter-form-container">
+            <form action="/pesquisa" method="get" class="newsletter-form">
+                <input type="email" id="barra-email" name="email" placeholder="Digite seu email" required>
+                <button type="submit" class="button-newsletter-send">Enviar</button>
+            </form>
+        </div>
+    </section>
 
 
     <section class="banner-grande">
@@ -214,48 +224,71 @@
         </div>
     </section>
 
-    <!--ICONES-->
-    <i class="bi bi-heart"></i>
-    <i class="bi bi-bag"></i>
-    <i class="bi bi-person"></i>
-    <i class="bi bi-search"></i>
-
 
     <footer class="footer">
-        <div class="footer-column">
-            <h2>OXENTE!!!!</h2>
-            <p>Você achou que eu iria esquecer de você?</p>
-            <P><strong>FEIRA DO TURISMO</strong></P>
-            <P><strong>79 99833-4897</strong></P>
+        <div class="footer-container">
 
-            <div class="icons-redes">
-                <a href="#">
-                    <li class=""></li>
-                </a>
-                <a href="#">
-                    <li class=""></li>
-                </a>
-                <a href="#">
-                    <li class=""></li>
-                </a>
-                <a href="#">
-                    <li class=""></li>
-                </a>
+            <div class="footer-column logo-info">
+                <h2>OXENTE!!!!</h2>
+                <p>Você achou que eu iria esquecer de você?</p>
+                <p class="contact-info"><strong>FEIRA DO TURISTA</strong></p>
+                <p class="contact-info"><strong>(79) 99833-4897</strong></p>
+
+                <div class="icons-redes">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
-            <div>
 
-                <div class="footer-eventos">
-                    <h2>EVENTOS NA ORLA DA ATALAIA</h2>
-                    <P>17 de outubro</P>
-                    <p>Vila da Criança</p>
+            <div class="footer-column quick-links">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Página inicial</a></li>
+                    <li><a href="about.html">Sobre nós</a></li>
+                    <li><a href="#">Encomendas</a></li>
+                    <li><a href="#">Mais Produtos</a></li>
+                    <li><a href="#">Suporte 24/7</a></li>
+                </ul>
+            </div>
 
-                    <hr>
-                    <h2>18 de outubro</h2>
-                    <p>Vila da crinaça</p>
-                    <div>
+            <div class="footer-column footer-eventos">
+                <h3>EVENTOS NA ORLA DA ATALAIA</h3>
+                <div class="event-item">
+                    <p class="event-date">17 de Outubro</p>
+                    <p class="event-title">Vila da Criança</p>
+                </div>
+                <hr>
+                <div class="event-item">
+                    <p class="event-date">18 de Outubro</p>
+                    <p class="event-title">Vila da Criança</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 OXENTE!!!!. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const btnToggle = document.getElementById("toggle-theme");
+
+        btnToggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            // Altera o texto do botão
+            if (document.body.classList.contains("dark-mode")) {
+                btnToggle.textContent = "☀️ Modo Claro";
+            } else {
+                btnToggle.textContent = "🌙 Modo Escuro";
+            }
+        });
+    </script>
+
 </body>
 
 </html>

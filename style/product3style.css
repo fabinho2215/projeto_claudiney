@@ -103,6 +103,7 @@
 
 .banner {
   background: linear-gradient(to bottom, #e3f6cd 0%, #c9f4a3 100%);
+  background-color: var(--box-color);
   display: flex;
   justify-content: left;
   align-items: center;
