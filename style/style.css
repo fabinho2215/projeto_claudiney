@@ -516,6 +516,7 @@ button {
   margin-bottom: 10px;
 }
 
+
 .sobre-texto h2 {
   font-size: 1.5rem;
   color: #0d4e00;
@@ -583,6 +584,7 @@ button {
 }
 
 
+
 /* 🌞 Estilo padrão (modo claro) */
 body {
   background-color: white;        /* fundo claro */
@@ -607,7 +609,7 @@ body.dark-mode {
   background-color: #121212;      /* fundo escuro */
 }
 
-body.dark-mode button {
+body.dark-mode button h1 {
   background-color: #2c2c2c;      /* botão escuro */
   color: rgb(255, 255, 255);                   /* texto do botão ainda preto */
 }
