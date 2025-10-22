@@ -30,41 +30,41 @@
 /* --- BARRA DE PESQUISA NO TOPO --- */
 .search-bar-top {
   background-color: #f7f7f700; 
-  padding: 15px 60px; /* Padding vertical e horizontal respecti. */
-  text-align: center; /* Centraliza o form dentro da div */
+  padding: 15px 60px; 
+  text-align: center; 
 }
 
 /* Estilo do Formulário */
 #top-search-form {
     display: flex;
-    max-width: 700px; /* Limita a largura máxima da barra para não ficar muito larga em telas grandes */
-    margin: 0 auto; /* Centraliza o formulário */
+    max-width: 700px;
+    margin: 0 auto; 
     border: 1px solid #ccc;
-    border-radius: 25px; /* Bordas arredondadas */
-    overflow: hidden; /* Garante que nada saia da borda */
+    border-radius: 25px; 
+    overflow: hidden;
     background-color: #fff;
 }
 
 /* Estilo do Input */
 #top-search-input {
-    flex-grow: 1; /* O input ocupa todo o espaço disponível */
+    flex-grow: 1; 
     border: none;
     padding: 10px 15px;
     font-size: 1rem;
-    outline: none; /* Remove o contorno azul ao focar */
+    outline: none;
 }
 
 /* Estilo do Botão (Lupa) */
 #top-search-form button {
-    background-color: #fff; /* Fundo branco ou transparente */
+    background-color: #fff; 
     border: none;
     padding: 0 15px;
     cursor: pointer;
-    display: flex; /* Para alinhar a lupa SVG */
+    display: flex; 
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
-    margin: 0; /* Remove a margem padrão de botões no CSS */
+    margin: 0; 
 }
 
 #top-search-form button:hover {
@@ -72,7 +72,7 @@
 }
 
 #top-search-form button svg {
-    color: #333; /* Cor da lupa */
+    color: #333; 
     width: 20px;
     height: 20px;
     transition: color 0.3s;
@@ -281,18 +281,6 @@
   margin-top: 0.5rem;
 }
 
-/*
-@media (max-width: 768px) {
-  .list-product {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    padding: 1rem;
-  }
-
-  .list-product img {
-    height: 200px;
-  }
-}
-*/
 
 .button-details:hover {
   background-color: #558c3b;
@@ -331,11 +319,11 @@
 /* --- SEÇÃO OFERTAS --- */
 .newsletter-section {
     display: flex;
-    justify-content: space-between; /* Espaça o texto e o formulário */
-    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 60px;
     margin: 50px 0;
-    background-color: #f8f8f8; /* Fundo suave para destacar */
+    background-color: #f8f8f8; 
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
@@ -362,18 +350,18 @@
     padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    width: 280px; /* Largura padrão para o campo de email */
+    width: 280px; 
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
 }
 
 #barra-email:focus {
-    border-color: #6ba84b; /* Cor de destaque ao focar */
+    border-color: #6ba84b; 
 }
 
 .button-newsletter-send {
-    background-color: #6ba84b; /* verde de destaque */
+    background-color: #6ba84b; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -381,7 +369,7 @@
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s;
-    margin: 0; /* anula a margem do seletor 'button' global */
+    margin: 0; 
 }
 
 .button-newsletter-send:hover {
@@ -447,7 +435,7 @@
 }
 
 .footer-column ul li a:hover {
-    color: #d4b200; /* cor amarela do site para destaque */
+    color: #d4b200; 
 }
 
 /* Estilo para Eventos */
@@ -516,6 +504,7 @@ button {
   margin-bottom: 10px;
 }
 
+
 .sobre-texto h2 {
   font-size: 1.5rem;
   color: #0d4e00;
@@ -583,17 +572,18 @@ button {
 }
 
 
-/* 🌞 Estilo padrão (modo claro) */
+
+/* Estilo padrão (modo claro) */
 body {
-  background-color: white;        /* fundo claro */
+  background-color: white;        
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease;
-  color: rgb(255, 255, 255);                   /* letras pretas */
+  color: rgb(255, 255, 255);                   
 }
 
 button {
-  background-color: #e0e0e0;      /* botão claro */
-  color: rgb(255, 255, 255);                   /* texto do botão */
+  background-color: #e0e0e0;     
+  color: rgb(255, 255, 255);                   
   padding: 10px 20px;
   margin: 20px;
   border: none;
@@ -602,12 +592,12 @@ button {
   transition: background-color 0.3s ease;
 }
 
-/* 🌚 Modo escuro: só muda o fundo e os botões */
+/*Modo escuro */
 body.dark-mode {
-  background-color: #121212;      /* fundo escuro */
+  background-color: #121212;      
 }
 
-body.dark-mode button {
-  background-color: #2c2c2c;      /* botão escuro */
-  color: rgb(255, 255, 255);                   /* texto do botão ainda preto */
+body.dark-mode button h1 {
+  background-color: #2c2c2c;     
+  color: rgb(255, 255, 255);                   
 }
